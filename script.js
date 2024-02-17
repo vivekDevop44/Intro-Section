@@ -1,0 +1,30 @@
+document.querySelector('.hamburger').addEventListener("click",()=>{
+    document.querySelector('.mobile_menu').classList.toggle("show_mobile_menu")
+})
+document.querySelector('.close_menu').addEventListener("click",()=>{
+    document.querySelector('.mobile_menu').classList.toggle("show_mobile_menu")
+})
+document.querySelectorAll('.drop_down_btn').forEach((ele)=>{
+    ele.addEventListener('click',()=>{
+        ele.parentElement.lastElementChild.classList.toggle("show_list")
+        ele.nextElementSibling.firstElementChild.classList.toggle("up_img")
+    })
+})
+document.querySelectorAll('.drop_down_arrow').forEach((ele)=>{
+    ele.addEventListener('click',()=>{
+        ele.parentElement.lastElementChild.classList.toggle("show_list")
+        ele.children[0].classList.toggle("up_img")
+    })
+})
+document.querySelectorAll('.desktop_drop_down_btn').forEach((ele)=>{
+    ele.addEventListener('click',()=>{
+        ele.parentElement.lastElementChild.classList.toggle("show_desktop_list")
+ele.nextElementSibling.children[0].classList.toggle("up_img");
+    })
+})
+document.querySelectorAll('.desktop_drop_down_arrow').forEach((ele)=>{
+    ele.addEventListener("click",()=>{
+        ele.children[0].classList.toggle("up_img");
+        ele.parentElement.lastElementChild.classList.toggle("show_desktop_list")
+    })
+})
